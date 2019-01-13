@@ -1,0 +1,10 @@
+node_modules
+.history
+dist/**/*
+.next/**
+src/server/utils/config.ts
+ormconfig.json
+public/**/*.html
+public/static/**/*
+build/.cache**
+/ormconfig.json

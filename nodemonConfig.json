@@ -1,0 +1,10 @@
+{
+    "restartable": "rs",
+    "verbose": true,
+    "ignore": [
+        "dist/client/**",
+        "src/client/**",
+        "public/*",
+        "build/*"
+    ]
+}
