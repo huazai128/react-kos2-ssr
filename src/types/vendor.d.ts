@@ -13,3 +13,7 @@ declare module '*.json' {
 interface Window {
     ServerData: any;
 }
+
+// declare module '*';
+
+

@@ -7,6 +7,7 @@ const chalk = require('chalk');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const nodeModules = path.resolve(__dirname, '../node_modules');
 const tsImportPluginFactory = require('ts-import-plugin')
+const { TsConfigPathsPlugin,CheckerPlugin } = require('awesome-typescript-loader'); // 用于alias别名配置
 
 const isDev = !!(process.env.NODE_ENV !== 'production');
 
@@ -18,20 +19,21 @@ function createHappyPlugin(id, loaders) {
 }
 
 module.exports = {
+    resolve: {
+        extensions: ['.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.react.js'],
+		alias: {
+			'server': path.join(__dirname, '../src/server/'),
+			'client': path.join(__dirname, '../src/client/')
+        },
+        plugins:[
+			new TsConfigPathsPlugin({
+				configFileName: 'tsconfig.json',
+				compiler: 'typescript',
+			})
+		]
+    },
     module: {
         rules: [
-            // {
-            //     test: /\.(js|jsx)$/,
-            //     use: ['happypack/loader?id=happy-babel-js']
-            // },
-            // {
-            //     test: /\.(js|jsx)$/,
-            //     loader: 'babel-loader',
-            //     query: {
-            //         cacheDirectory: true,
-            //         plugins: [["import",  { "libraryName": "antd", "libraryDirectory": "lib", "style": "css" }]]
-            //     }
-            // },
             {
                 test: /\.(jsx|tsx|js|ts)$/,
                 loader: 'ts-loader',
@@ -121,9 +123,6 @@ module.exports = {
         ],
         noParse: /node_modules\/(jquey|js\-cookie\.js)/
     },
-    resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash:8].css",
@@ -195,6 +194,7 @@ module.exports = {
             format: chalk.blue.bold("build  ") + chalk.cyan("[:bar]") + chalk.green.bold(':percent') + ' (' + chalk.magenta(":elapsed") + ' seconds) ',
             clear: false
         }),
+        new CheckerPlugin(),
         new LodashModuleReplacementPlugin(),
     ]
 };

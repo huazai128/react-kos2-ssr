@@ -1,16 +1,18 @@
 import 'reflect-metadata'
 import { join } from 'path'
 import * as Koa from 'koa'
-import { useKoaServer } from 'routing-controllers'
-import * as bodyParser from 'koa-bodyparser'
-import * as logger from 'koa-logger'
+// import * as jwt from 'koa-jwt'
 import * as json from 'koa-json'
 import * as views from 'koa-views'
 import * as helmet from 'koa-helmet'
+import * as logger from 'koa-logger'
 import * as koaStatic from 'koa-static'
 import * as koaSession from 'koa-session'
+import * as bodyParser from 'koa-bodyparser'
+import { useKoaServer } from 'routing-controllers'
 import { whiteList } from './middleware/whiteListMiddleware'
 import MongClient from './utils/mongodb'
+// import { secret } from './utils/config'
 
 const port = parseInt(process.env.NODE_POST, 10) || 3001
 
@@ -27,6 +29,11 @@ MongClient.connect()
             extension: 'html',
             map: { html: 'ejs' }
         }))
+        //全局路由除了path 以外都需要携带token去请求
+        // server.use(jwt({secret:secret}).unless({
+        //   path: [/^\/*/] 
+        //   // path: [/^\/login/] 
+        // }))
         server.keys = ['react-koa2-ssr']
         server.use(koaSession({
             key: 'koa:sess',
@@ -44,7 +51,6 @@ MongClient.connect()
             // defaultErrorHandler: false
         })
         app.listen(port)
-
         console.log(`Koa application is up and running on port ${port}`)
     })
     .catch(err => {

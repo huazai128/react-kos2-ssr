@@ -25,7 +25,6 @@ class Routes extends React.Component<RouterProps, any> {
         { routes.map((item, index) => (
           <Route exact={ item.exact } path={ item.path } component={item.component} />
         )) }
-        {/* <Route exact path='/' component={Home} /> */}
       </Switch>
     )
   }

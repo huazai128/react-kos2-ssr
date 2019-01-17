@@ -1,4 +1,4 @@
-使用 Koa、TypeORM、TypeScript、React SSR 构建重构自己的博客（由于本项目是从wordpress迁移过来的，所以数据部分采用wordpress数据）
+使用 Koa2、Mongodb、TypeScript、React SSR 构建重构自己的博客（由于本项目是从wordpress迁移过来的，所以数据部分采用wordpress数据）
 
 ## SSR 流程及思路
 
