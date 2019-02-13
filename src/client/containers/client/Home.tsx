@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 
 interface HomeProps {
@@ -19,7 +18,7 @@ export default class Home extends React.Component<HomeProps, any> {
   render() {
     return (
       <section className='lt-main page-home'>
-        <h3>1发vfv  adada====</h3>
+        <h3>首页</h3>
       </section>
     )
   }

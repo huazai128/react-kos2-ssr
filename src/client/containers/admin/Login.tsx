@@ -18,14 +18,6 @@ class Login extends React.Component<HomeProps, any> {
         super(props)
     }
 
-    // componentWillReceiveProps(nextprops) {
-    //     const { loginInfo } = nextprops.loginStore
-    //     console.log(21212, loginInfo)
-    //     if (loginInfo && loginInfo.code === 200) {
-    //         message.success(loginInfo.msg)
-    //     }
-    // }
-
     componentWillReact() {
         const { loginInfo } = this.props.loginStore
         if (loginInfo && loginInfo.code === 200) {
