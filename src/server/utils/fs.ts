@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-
+// 读取目录
 export function readDir(dir: string): Promise<any> {
     return new Promise((resolve, reject) => {
         fs.readdir(dir, (err, content) => {
@@ -8,7 +8,7 @@ export function readDir(dir: string): Promise<any> {
         })
     })
 }
-
+// 读取目录
 export function readFile(url: string): Promise<any> {
     return new Promise((resolve, reject) => {
         fs.readFile(url, 'utf-8', (err, content) => {
@@ -18,6 +18,7 @@ export function readFile(url: string): Promise<any> {
     })
 }
 
+// 获取文件格式
 export function getFileFormat(fileName: string): string {
     const fileFormat = fileName.split('.')
     return fileFormat[fileFormat.length - 1]

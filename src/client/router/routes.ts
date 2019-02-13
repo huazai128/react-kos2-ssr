@@ -19,6 +19,14 @@ const routes:RouteConfig[] = [
       resolve: () => import("../containers/client/Home"),
       // LoadingComponent: () => (<Loading />)
     })
+  },
+  {
+    path: '/login',
+    exact: true,
+    component: asyncComponent({
+      resolve: () => import("../containers/client/Login"),
+      // LoadingComponent: () => (<Loading />)
+    })
   }
 ]
 

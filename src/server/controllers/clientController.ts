@@ -12,7 +12,7 @@ export class UserController {
     async getHome(@Ctx() ctx: any) {
       const ServerData = { url: ctx.req.url }
       await ctx.render('client', { // 
-        title:"前大大",
+        title:"大大",
         html: minify(render(ServerData, ctx.req.url)),
         ServerData
       })
@@ -24,6 +24,16 @@ export class UserController {
       const ServerData = { url: ctx.req.url }
       await ctx.render('client', { // 
         title:"嘻哈====",
+        html: minify(render(ServerData, ctx.req.url)),
+        ServerData
+      })
+      return ctx
+    }
+    @Get('/login')
+    async login(@Ctx() ctx: any){
+      const ServerData = { url: ctx.req.url }
+      await ctx.render('client', { // 
+        title:"喜欢",
         html: minify(render(ServerData, ctx.req.url)),
         ServerData
       })

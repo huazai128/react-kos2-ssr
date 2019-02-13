@@ -11,18 +11,15 @@ interface HomeProps {
 @observer
 export default class Home extends React.Component<HomeProps, any> {
   componentWillReceiveProps(nextProps) {
-    console.log("===")
   }
 
   componentDidMount() {
-    console.log("=======huazai")
-    console.log();
   }
 
   render() {
     return (
       <section className='lt-main page-home'>
-        <h3>牛顿法====</h3>
+        <h3>1发vfv  adada====</h3>
       </section>
     )
   }

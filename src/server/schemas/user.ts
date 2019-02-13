@@ -1,9 +1,8 @@
-import * as mongoose from 'mongoose'
+import { Schema, model } from 'mongoose'
 import * as mongoosePaginate from 'mongoose-paginate'
 import * as autoIncrement from 'mongoose-auto-increment'
-
 //  User集合
-const userSchema = new mongoose.Schame({
+const userSchema = new Schema({
   // 微信openid
   openid:{ type:String, required: true },
   // 微信名称
@@ -33,6 +32,6 @@ userSchema.pre("findOneAndUpdate", (next) => {
   next();
 })
 
-const User = mongoose.model("User", userSchema);
+const User = model("User", userSchema);
 
 export default User;

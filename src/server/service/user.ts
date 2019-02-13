@@ -1,4 +1,4 @@
-import User from '../modules/user'
+import User from '../schemas/user'
 import { appId, appSecret, secret } from '../utils/config'
 
 export default class UserService{
