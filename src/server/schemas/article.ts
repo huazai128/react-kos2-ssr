@@ -32,7 +32,7 @@ const articleSchema = new Schema({
 })
 
 articleSchema.set("toObject",{ getters: true });
-articleSchema.plugin(mongoosePaginate);
+articleSchema.plugin(mongoosePaginate); // 分页
 articleSchema.plugin(MongooseAutoIncrementID.plugin,{
   modelName: 'Article', //
   field: 'user_id', // 字段

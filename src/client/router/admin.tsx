@@ -26,6 +26,8 @@ const Login = Loadable({
 
 const isServer = typeof require.ensure !== 'function' // require.ensure webpack 提供
 
+console.log(isServer,'isServer')
+
 class Routes extends React.Component<RouterProps, any> {
     constructor(props) {
         super(props)

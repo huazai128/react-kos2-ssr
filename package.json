@@ -72,6 +72,7 @@
     "@types/stylus": "^0.48.30",
     "@types/webpack": "^4.4.0",
     "@types/webpack-env": "^1.13.6",
+    "autoprefixer": "^9.4.7",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
@@ -98,6 +99,7 @@
     "nodemon": "^1.17.3",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "postcss-loader": "^2.1.5",
+    "postcss-pxtorem": "^4.0.1",
     "progress-bar-webpack-plugin": "^1.11.0",
     "prop-types": "^15.6.2",
     "purched-antd-icons": "^0.2.2",
@@ -117,7 +119,8 @@
     "webpack": "^4.7.0",
     "webpack-cli": "^3.0.8",
     "webpack-hot-middleware": "^2.22.2",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "dependencies": {
     "antd": "^3.6.5",
@@ -163,6 +166,7 @@
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
     "routing-controllers": "^0.7.7",
+    "rxjs": "^6.4.0",
     "typeorm": "^0.1.0"
   },
   "scripts": {

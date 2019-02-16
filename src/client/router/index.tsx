@@ -16,6 +16,9 @@ class Routes extends React.Component<RouterProps, any> {
       window.scrollTo(0, 0)
     }
   }
+  routerWillLeave() {
+    console.log("======")
+  }
 
   render() {
   
