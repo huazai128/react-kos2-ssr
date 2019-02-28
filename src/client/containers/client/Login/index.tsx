@@ -1,8 +1,15 @@
 import * as React from 'react'
+import { observer, inject } from 'mobx-react'
 import './style.less'
 
+@inject((stores:any) => {
+  login: stores.loginStore
+})
 export default class index extends React.Component {
   state = {  }
+  componentDidMount(){
+    console.log("")
+  }
   render() {
     return (
       <div className="login-box">

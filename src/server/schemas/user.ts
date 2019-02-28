@@ -1,14 +1,19 @@
 import { Schema, model } from 'mongoose'
 import * as mongoosePaginate from 'mongoose-paginate'
 import * as autoIncrement from 'mongoose-auto-increment'
+
 //  User集合
 const userSchema = new Schema({
   // 微信openid
-  openid:{ type:String, required: true },
+  openid: String,
   // 微信名称
-  nickName:{ type:String, required: true },
+  nickName: String,
   // 微信头像
-  avatarUrl:{ type:String, required: true },
+  avatarUrl: String,
+  // 用户名
+  username: { type: String, required: true },
+  //
+  password: { type: String, required: true },
   // 创建时间
   create_at: { type: Date, default: Date.now },
   // 更新时间

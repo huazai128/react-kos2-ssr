@@ -33,7 +33,5 @@
     ],
     "files": [
         "src/types/vendor.d.ts"
-    ],
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    ]
 }

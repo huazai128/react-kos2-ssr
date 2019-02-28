@@ -18,7 +18,7 @@ export default class Home extends React.Component<HomeProps, any> {
   render() {
     return (
       <section className='lt-main page-home'>
-        <h3>首页</h3>
+        <h3>首页----华仔</h3>
       </section>
     )
   }

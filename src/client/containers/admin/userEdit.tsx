@@ -15,6 +15,9 @@ class UserEdit extends React.Component<HomeProps, any> {
     constructor(props) {
         super(props)
     }
+    componentDidMount(){
+        console.log("=======")
+    }
 
     handleSubmit = (e) => {
         e.preventDefault()

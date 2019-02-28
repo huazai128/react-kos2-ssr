@@ -3,8 +3,6 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import * as Loadable from 'react-loadable'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import NotFound from '../containers/admin/NotFound'
-import Header from '../components/header'
-import Footer from '../components/footer'
 
 interface RouterProps {
     location: any
@@ -43,7 +41,6 @@ class Routes extends React.Component<RouterProps, any> {
         const timeout = { enter: 400, exit: 350 }
         return (
             <>
-                <Header location={location} />
                 <TransitionGroup component='main' className='lt-main-admin'>
                     <CSSTransition key={currentKey === 'page' ? '/' : currentKey} timeout={timeout} classNames='slide' appear>
                         <Switch location={location}>
@@ -52,7 +49,6 @@ class Routes extends React.Component<RouterProps, any> {
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
-                <Footer />
                 {/* <Prompt message='确认离开当前页面？' /> */}
             </>
         )

@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import * as stores from './stores'
 import { AppStore } from './stores/appStore'
 import App from './router/admin'
-// import './assets/stylus/admin.styl'
+import './assets/stylus/index.styl'
 
 const appStore = new AppStore(window.ServerData);
 const renderApp = (component: typeof App) => (

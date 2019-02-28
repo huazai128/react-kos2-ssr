@@ -9,7 +9,7 @@ export class ErrorResponder implements KoaMiddlewareInterface {
             await next()
         } catch (error) {
             // do something with caught rejection
-            await ctx.render('blog', {
+            await ctx.render('', {
                 title: '404',
                 html: render({}, ctx.req.url),
                 ServerData: {}
