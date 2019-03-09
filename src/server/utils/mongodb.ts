@@ -1,11 +1,12 @@
 import * as mongoose from 'mongoose'
-import * as bluebird from 'bluebird'
+// import * as autoIncrement from 'mongoose-auto-increment's
 import { domain } from './config'
 
 export default class MongClient {
   private static connectNum: number = 0;
   public static connect(){
     return mongoose.connect(`${domain}/ssr`,{useNewUrlParser:true}).then(() => {
+      this.initPlug();
       console.log("数据连接成功===");
     })
     .catch((err) => {
@@ -17,8 +18,8 @@ export default class MongClient {
       }
     })
   }
-  // public static mongoose (){
-  //   mongoose.Promise = bluebird;
-  //   return mongoose;
-  // }
+  // 初始化插件
+  private static initPlug(){
+    // autoIncrement.initialize(mongoose.connection);
+  }
 }

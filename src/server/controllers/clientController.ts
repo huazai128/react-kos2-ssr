@@ -11,6 +11,7 @@ export class UserController {
     @Get('/')
     async getHome(@Ctx() ctx: any) {
       const ServerData = { url: ctx.req.url }
+      console.log(ctx.session.userId, '=======s')
       await ctx.render('client', { // 
         title:"大大",
         html: minify(render(ServerData, ctx.req.url)),

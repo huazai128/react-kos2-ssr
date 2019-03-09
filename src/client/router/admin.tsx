@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
 import * as Loadable from 'react-loadable'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import NotFound from '../containers/admin/NotFound'
 
 interface RouterProps {
     location: any
@@ -22,9 +21,8 @@ const Login = Loadable({
     loading: Loading
 })
 
-const isServer = typeof require.ensure !== 'function' // require.ensure webpack 提供
+const isServer = typeof require.ensure !== 'function' 
 
-console.log(isServer,'isServer')
 
 class Routes extends React.Component<RouterProps, any> {
     constructor(props) {

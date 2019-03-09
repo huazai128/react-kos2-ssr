@@ -35,7 +35,7 @@ articleSchema.set("toObject",{ getters: true });
 articleSchema.plugin(mongoosePaginate); // 分页
 articleSchema.plugin(MongooseAutoIncrementID.plugin,{
   modelName: 'Article', //
-  field: 'user_id', // 字段
+  field: 'id', // 字段
   incrementBy: 1, // 每次增加1
   nextCount: false, // 
   resetCount: 'reset', // 是否重置

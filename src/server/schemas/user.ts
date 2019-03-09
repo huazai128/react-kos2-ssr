@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose'
 import * as mongoosePaginate from 'mongoose-paginate'
-import * as autoIncrement from 'mongoose-auto-increment'
+import { MongooseAutoIncrementID } from 'mongoose-auto-increment-reworked'
+MongooseAutoIncrementID.initialise("userSchema") // 初始化
 
 //  User集合
 const userSchema = new Schema({
@@ -24,11 +25,14 @@ const userSchema = new Schema({
 
 // 分页插件
 userSchema.plugin(mongoosePaginate);
-userSchema.plugin(autoIncrement.plugin, { //自增ID插件配置
-  model: 'User', // 插入到User集合中
-  field: 'id', // 字段为id
-  startAt: 1000000, //开始值
-  incrementBy: 1  //每次加
+userSchema.plugin(MongooseAutoIncrementID.plugin, { //自增ID插件配置
+  modelName: 'User', //model
+  field: 'id', // 字段
+  incrementBy: 1, // 每次增加1
+  nextCount: false, // 
+  resetCount: 'reset', // 是否重置
+  startAt: 1000000, // 开始值
+  unique: true // 是否添加唯一索引
 })
 
 // 更新时制动更新时间

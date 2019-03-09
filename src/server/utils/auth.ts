@@ -1,9 +1,8 @@
 // import * as jwt from 'jsonwebtoken'
-import * as md5 from 'md5'
-
-export function crypto(str: string) {
-    return md5(md5(str.split('').reverse().join('-')))
-}
+import * as crypto from 'crypto'
+export function sha256 (pwd:string) {
+    return crypto.createHmac("sha256", pwd).update("mimawoyebuzhidao").digest("hex");
+  };
 
 // export async function pageVerify(ctx, next) {
 //     const token = ctx.cookies.get('access_token'),

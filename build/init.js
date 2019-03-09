@@ -11,5 +11,6 @@ export const description = '扯淡'
 export const keywords = 'Koa2 MongoDB React Webpack'
 export const ext = ['.png', '.jpg', '.jpeg', '.gif', '.svg']
 export const domain = '${process.env.NODE_DOMAIN}'
+export const userId = '${ process.env.USER_ID }'
 `
 fs.writeFileSync(path.join(__dirname, '../src/server/utils/config.ts'), str)

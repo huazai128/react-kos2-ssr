@@ -5,9 +5,8 @@ const HappyPack = require('happypack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const chalk = require('chalk');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-const nodeModules = path.resolve(__dirname, '../node_modules');
 const tsImportPluginFactory = require('ts-import-plugin')
-const { TsConfigPathsPlugin,CheckerPlugin } = require('awesome-typescript-loader'); // 用于alias别名配置
+const { CheckerPlugin } = require('awesome-typescript-loader'); // 用于alias别名配置
 
 const isDev = !!(process.env.NODE_ENV !== 'production');
 

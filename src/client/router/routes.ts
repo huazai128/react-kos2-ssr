@@ -9,7 +9,6 @@ const routes:RouteConfig[] = [
     exact: true,
     component: asyncComponent({
       resolve: () => import("../containers/client/Home"),
-      // LoadingComponent: () => (<div>1212</div>)
     })
   },
   {

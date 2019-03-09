@@ -6,7 +6,7 @@ class LoginStore {
 
     @action
     async login(data) {
-        const loginInfo = await request(`/api/login`, {
+        const loginInfo = await request(`/api/user/login`, {
             method: 'POST',
             data
         })
