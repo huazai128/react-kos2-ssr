@@ -7,12 +7,14 @@ export interface InputProps{
   className?: string;
   placeholder?: string;
   onChange: (txt: string) => void;
+  type?: string;
 }
 
 export default class index extends React.Component<InputProps,any> {
   private input: HTMLInputElement;
   static defaultProps = {
     placeholder: '请输入...',
+    type: 'text'
   }
   componentDidMount(){
     fromEvent(this.input,"input").pipe(
@@ -22,12 +24,13 @@ export default class index extends React.Component<InputProps,any> {
     })
   }
   render() {
-    const { className, placeholder,  } = this.props;
+    const { className, placeholder, type } = this.props;
     const cls = classnames("input-box",className)
     return (
       <input 
         className={ cls } 
         ref={ (r) => this.input = r }
+        type={ type }
         placeholder={ placeholder } />
     );
   }

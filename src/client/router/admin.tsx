@@ -1,56 +1,42 @@
 import * as React from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
-import * as Loadable from 'react-loadable'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import Nav from '../components/Nav'
+import Tabs from '../components/Tab'
+import Bread from '../components/Breadcrumb'
+import routes from './routesAdmin'
 
 interface RouterProps {
     location: any
 }
 
-const Loading = props => {
-    return <div>Loading...</div>
-}
-
-const Home = Loadable({
-    loader: () => import('../containers/admin/Admin'),
-    loading: Loading
-})
-
-const Login = Loadable({
-    loader: () => import('../containers/admin/Login'),
-    loading: Loading
-})
-
-const isServer = typeof require.ensure !== 'function' 
-
-
 class Routes extends React.Component<RouterProps, any> {
-    constructor(props) {
-        super(props)
-    }
-
-    routerWillLeave() {
-        console.log(121212)
-    }
-
-    render() {
-        const { location } = this.props
-        const currentKey = location.pathname.split('/')[1] || '/'
-        const timeout = { enter: 400, exit: 350 }
-        return (
-            <>
-                <TransitionGroup component='main' className='lt-main-admin'>
-                    <CSSTransition key={currentKey === 'page' ? '/' : currentKey} timeout={timeout} classNames='slide' appear>
-                        <Switch location={location}>
-                            <Route exact path='/admin/' component={isServer ? require('../containers/admin/Admin').default : Home} />
-                            <Route exact path='/admin/login' component={isServer ? require('../containers/admin/Login').default : Login} />
-                        </Switch>
-                    </CSSTransition>
-                </TransitionGroup>
-                {/* <Prompt message='确认离开当前页面？' /> */}
-            </>
-        )
-    }
+  constructor(props) {
+      super(props)
+  }
+  routerWillLeave() {
+      console.log(121212)
+  }
+  render() {
+    const { location:{ pathname },location} = this.props;
+    return (
+      <div className="flex admin-box">
+        { !Object.is(pathname,'/admin/login') && <Nav routes={ routes.filter(item => !!item.name) } /> }
+        <div className="flex-g-1 flex-col">
+          { !Object.is(pathname,'/admin/login') && <>
+            <Tabs />  
+            <Bread />
+          </>}
+          <div className="flex-g-1 main-content">
+            <Switch location={location}>
+              { routes.map((item,index) => (
+                <Route key={ index } exact={ item.exact } path={ item.path } component={ item.component }  />
+              )) }
+            </Switch>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default withRouter(Routes)
+export default withRouter(Routes)   
