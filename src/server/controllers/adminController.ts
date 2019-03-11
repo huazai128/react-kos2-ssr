@@ -15,7 +15,7 @@ export class UserController {
 
     @Get('/')
     async home(@Ctx() ctx: any) {
-        if (!ctx.session.username) ctx.redirect('/admin/login')
+        // if (!ctx.session.username) ctx.redirect('/admin/login')
         const ServerData = {
             isLogin: !!ctx.session.username
         }

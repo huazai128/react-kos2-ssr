@@ -5,7 +5,7 @@ import { domain } from './config'
 export default class MongClient {
   private static connectNum: number = 0;
   public static connect(){
-    return mongoose.connect(`${domain}/ssr`,{useNewUrlParser:true}).then(() => {
+    return mongoose.connect(`${domain}/ssr`,{useNewUrlParser:true,useCreateIndex: true}).then(() => {
       this.initPlug();
       console.log("数据连接成功===");
     })
