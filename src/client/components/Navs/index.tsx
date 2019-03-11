@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { NavLink } from 'react-router-dom'
 import { RouteConfig } from 'react-router-config'
-import "./style.styl"
+import './style.styl'
 
 interface NavProps {
   routes: RouteConfig[];

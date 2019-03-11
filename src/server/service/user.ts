@@ -22,6 +22,7 @@ export const getUserInfo = async (id) => {
   // findById只能用_id字段；
   return await User.findOne({ id: id }).select("username password -_id")
   .then((user) => {
+    console.log("===")
     return user
   })
   .catch((err) => {
