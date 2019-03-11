@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { withRouter, Link } from 'react-router-dom'
-import './style.styl'
 
 // @withRouter
 export default class extends React.Component {

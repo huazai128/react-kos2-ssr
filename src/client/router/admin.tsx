@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
-import Nav from '../components/Nav'
+import Nav from '../components/Navs'
 import Tabs from '../components/Tab'
 import Bread from '../components/Breadcrumb'
 import routes from './routesAdmin'
