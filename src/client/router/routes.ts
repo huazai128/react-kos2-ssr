@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { asyncComponent } from 'react-async-component'
-import { RouteConfig } from 'react-router-config'
+// import { RouteConfig } from 'react-router-config'
 
-const routes:RouteConfig[] = [
+const routes = [
   {
     path: '/',
-    exact: true,
     component: asyncComponent({
       resolve: () => import("../containers/client/Home"),
     })

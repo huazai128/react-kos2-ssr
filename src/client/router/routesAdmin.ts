@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { asyncComponent } from 'react-async-component'
-import { RouteConfig } from 'react-router-config'
 
-const routes: RouteConfig[] = [
+const routes = [
   {
     path: '/admin/',
     exact: true,

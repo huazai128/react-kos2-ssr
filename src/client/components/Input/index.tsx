@@ -12,10 +12,10 @@ export interface InputProps{
 
 export default class index extends React.Component<InputProps,any> {
   private input: HTMLInputElement;
-  static defaultProps = {
-    placeholder: '请输入...',
-    type: 'text'
-  }
+  // public static defaultProps = {
+  //   placeholder: '请输入...',
+  //   type: 'text'
+  // }
   componentDidMount(){
     fromEvent(this.input,"input").pipe(
       map((e) => e.target)

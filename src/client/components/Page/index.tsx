@@ -1,6 +1,6 @@
 import * as React from 'react'
 import classnames from 'classnames'
-const { Component, Suspense, lazy } = React;
+const { Component } = React;
 
 interface PageProps {
   className?: string;
@@ -9,11 +9,10 @@ interface PageProps {
 export default class extends Component<PageProps,any> {
   constructor(props:PageProps){
     super(props);
-    this.state = {}
   }
-  static defaultProps = {
-    className: ""
-  }
+  // static defaultProps = {
+  //   className: ""
+  // }
   render() {
     const { className } = this.props;
     const cls = classnames("main-box",className)

@@ -2,7 +2,6 @@ import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
 
 export default class extends React.Component {
-  state = {  }
   render() {
     return (
       <div className="select-box">

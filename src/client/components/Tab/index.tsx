@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 export default class index extends React.Component {
-  state = {  }
   render() {
     return (
       <div className="tabs-box flex-vcenter jc-between">

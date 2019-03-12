@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { NavLink } from 'react-router-dom'
-import { RouteConfig } from 'react-router-config'
 
 interface NavProps {
-  routes: RouteConfig[];
+  routes: Array<any>
 }
 
 export default class extends React.Component<NavProps,any> {

@@ -34,9 +34,7 @@ node 在到请求后利用了 react 提供的 renderToString 函数将 jsx 解�
 
 1、npm i
 
-2、编辑 ormconfig.json 文件，写入mysql配置
-
-3、npm run dll 构建 DLL 库(如果公用库没改变不需要重复构建)
+2、npm run dll 构建 DLL 库(如果公用库没改变不需要重复构建)
 
 ## 开发
 
@@ -52,8 +50,6 @@ node 在到请求后利用了 react 提供的 renderToString 函数将 jsx 解�
 
 ## 依赖
 
-    npm i -g typeorm
-    
     npm i -g typescript
 
 
@@ -73,7 +69,6 @@ node 在到请求后利用了 react 提供的 renderToString 函数将 jsx 解�
     |   |  |__ index.ts 应用入口文件
     |   |__ server
     |   |  |__ controller 控制器
-    |   |  |__ entity 实体
     |   |  |__ services 业务层
     |   |  |__ index.ts 应用入口文件
     |   |  |__ routers.ts 路由

@@ -9,7 +9,6 @@ import './style.styl'
 
 @autobind
 export default class extends React.Component {
-  state = {  }
   handleChange(){
 
   }

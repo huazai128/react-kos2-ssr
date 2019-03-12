@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom'
 
 // @withRouter
 export default class extends React.Component {
-  state = {  }
   render() {
     // const {  } = this.props;
     // console.log(this.props);
