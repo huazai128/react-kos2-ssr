@@ -5,7 +5,7 @@
             "es6", 
             "dom"
         ],
-        "target": "es2016",
+        "target": "es6",
         "module": "commonjs",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
@@ -13,16 +13,7 @@
         "rootDir": "./src",
         "outDir": "./dist",
         "sourceMap": true,
-        "jsx": "react",
-        "baseUrl": ".",
-        "paths": {
-            "client/*": [
-                "src/client/*"
-            ],
-            "server/*": [
-                "src/server/*"
-            ]
-        }
+        "jsx": "react"
     },
     "exclude": [
         "node_modules",
@@ -33,5 +24,7 @@
     ],
     "files": [
         "src/types/vendor.d.ts"
-    ]
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
 }

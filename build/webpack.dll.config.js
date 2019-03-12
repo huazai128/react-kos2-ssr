@@ -16,7 +16,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
-                // 开启多线程,js压缩开启多进程,node是一个单进程的
+                // 开启多线程
                 parallel: true,
                 uglifyOptions: {
                     compress: {

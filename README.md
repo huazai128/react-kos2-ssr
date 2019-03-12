@@ -1,4 +1,4 @@
-使用 Koa2、Mongodb、TypeScript、React SSR 构建重构自己的博客（由于本项目是从wordpress迁移过来的，所以数据部分采用wordpress数据）
+使用 Koa、TypeORM、TypeScript、React SSR 构建重构自己的博客（由于本项目是从wordpress迁移过来的，所以数据部分采用wordpress数据）
 
 ## SSR 流程及思路
 
@@ -52,7 +52,10 @@ node 在到请求后利用了 react 提供的 renderToString 函数将 jsx 解�
 
 ## 依赖
 
+    npm i -g typeorm
+    
     npm i -g typescript
+
 
 ## 目录结构
 
@@ -91,3 +94,8 @@ node 在到请求后利用了 react 提供的 renderToString 函数将 jsx 解�
 - ~~引入stylus~~
 - ~~引入mobx~~
 - ~~完善webpack配置~~
+- ~~antd 按需加载不成功的bug~~
+- 完成页面逻辑
+- 引入热更新
+- 引入pwa
+- 引入jest，并使用

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { autobind } from 'core-decorators'
 import Page from '../../../components/Page'
 import { Select,Input,Button } from 'antd'
-const Option = Select.Option;
+// const Option = Select.Option;
 const Search = Input.Search;
 
 import './style.styl'
@@ -36,7 +36,7 @@ export default class extends React.Component {
               onSearch={this.onSearch}/>
           </div>
           <div className="search-group">
-            <Button type="primary">新增文章</Button>
+            <Button type="primary">新增文章啊</Button>
           </div>
         </section>
         <section className="">

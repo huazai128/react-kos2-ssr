@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { url, host } from './config'
 axios.defaults.baseURL = url
-
 /**
  * 检查响应状态
  * @param response 

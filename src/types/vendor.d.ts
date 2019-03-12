@@ -14,6 +14,6 @@ interface Window {
     ServerData: any;
 }
 
-// declare module '*';
+declare module '*';
 
 
