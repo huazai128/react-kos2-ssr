@@ -1,8 +1,8 @@
 import { Controller, Ctx, Get, Param, UseBefore, UseAfter } from 'routing-controllers'
 import { minify } from 'html-minifier'
-import * as rp from 'request-promise'
+// import * as rp from 'request-promise'
 import { render } from '../utils/render'
-import { url, title } from '../utils/config'
+// import { url, title } from '../utils/config'
 import { ErrorResponder } from '../middleware/errorMiddleware'
 
 @Controller()

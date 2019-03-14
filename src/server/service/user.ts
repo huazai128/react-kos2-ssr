@@ -1,6 +1,6 @@
 import User from '../schemas/user'
-import { appId, appSecret, secret } from '../utils/config'
-import { sha256 } from '../utils/auth'
+// import { appId, appSecret, secret } from '../utils/config'
+// import { sha256 } from '../utils/auth'
 
 // 初次调用就可以了
 // (async function init(){

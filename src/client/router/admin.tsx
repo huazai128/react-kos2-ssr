@@ -21,7 +21,7 @@ class Routes extends React.Component<RouterProps, any> {
     return (
       <div className="flex admin-box">
         { !Object.is(pathname,'/admin/login') && <Nav routes={ routes.filter(item => !!item.name) } /> }
-        <div className="flex-g-1 flex-col">
+        <div className="flex-g-1 flex-col admin-container">
           { !Object.is(pathname,'/admin/login') && <>
             <Tabs />  
             <Bread />

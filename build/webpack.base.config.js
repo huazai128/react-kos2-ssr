@@ -5,9 +5,7 @@ const HappyPack = require('happypack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const chalk = require('chalk');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-const nodeModules = path.resolve(__dirname, '../node_modules');
 const tsImportPluginFactory = require('ts-import-plugin')
-
 const isDev = !!(process.env.NODE_ENV !== 'production');
 
 function createHappyPlugin(id, loaders) {
@@ -20,18 +18,6 @@ function createHappyPlugin(id, loaders) {
 module.exports = {
     module: {
         rules: [
-            // {
-            //     test: /\.(js|jsx)$/,
-            //     use: ['happypack/loader?id=happy-babel-js']
-            // },
-            // {
-            //     test: /\.(js|jsx)$/,
-            //     loader: 'babel-loader',
-            //     query: {
-            //         cacheDirectory: true,
-            //         plugins: [["import",  { "libraryName": "antd", "libraryDirectory": "lib", "style": "css" }]]
-            //     }
-            // },
             {
                 test: /\.(jsx|tsx|js|ts)$/,
                 loader: 'ts-loader',

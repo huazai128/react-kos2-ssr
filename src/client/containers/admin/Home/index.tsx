@@ -38,8 +38,10 @@ export default class extends React.Component {
             <Button type="primary">新增文章啊</Button>
           </div>
         </section>
-        <section className="">
-        
+        <section className="flex-g-1">
+          <div className="">
+          
+          </div>
         </section>
       </Page>
     );
