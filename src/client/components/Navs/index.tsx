@@ -16,10 +16,9 @@ export default class extends React.Component<NavProps,any> {
             <NavLink 
               to={ item.path }
               className="item"
-              activeClassName="action">首页</NavLink>
+              activeClassName="action">{ item.name }</NavLink>
           </div>
         )) }
-        
       </section>
     );
   }

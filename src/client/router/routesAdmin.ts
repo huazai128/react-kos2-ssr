@@ -8,7 +8,26 @@ const routes = [
     component: asyncComponent({
       resolve: () => import('../containers/admin/Home'),
     }),
-    name: '首页'
+    name: '首页',
+    isNav: true
+  },
+  {
+    path: '/admin/tags',
+    exact: true,
+    component: asyncComponent({
+      resolve: () => import('../containers/admin/Tag'),
+    }),
+    name: '标签',
+    isNav: true
+  },
+  {
+    path: '/admin/post-article',
+    exact: true,
+    component: asyncComponent({
+      resolve: () => import('../containers/admin/PostArticle'),
+    }),
+    name: '新增文章',
+    isNav: false
   },
   {
     path: '/admin/login',
@@ -16,6 +35,7 @@ const routes = [
     component: asyncComponent({
       resolve: () => import('../containers/admin/Login'),
     }),
+    isNav: false
   },
 ]
 

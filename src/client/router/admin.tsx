@@ -20,7 +20,7 @@ class Routes extends React.Component<RouterProps, any> {
     const { location:{ pathname },location} = this.props;
     return (
       <div className="flex admin-box">
-        { !Object.is(pathname,'/admin/login') && <Nav routes={ routes.filter(item => !!item.name) } /> }
+        { !Object.is(pathname,'/admin/login') && <Nav routes={ routes.filter(item => item.isNav) } /> }
         <div className="flex-g-1 flex-col admin-container">
           { !Object.is(pathname,'/admin/login') && <>
             <Tabs />  

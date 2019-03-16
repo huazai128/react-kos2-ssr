@@ -20,13 +20,39 @@ export class UserController {
             isLogin: !!ctx.session.username
         }
         await ctx.render('admin', {
-            title: 'admin',
+            title: "技术文章管理后台",
             html: minify(render(ServerData, ctx.req.url, 'admin')),
             ServerData
         })
         return ctx
     }
 
+    @Get('/tags')
+    async tags(@Ctx() ctx: any) {
+        // if (!ctx.session.username) ctx.redirect('/admin/login')
+        const ServerData = {
+            isLogin: !!ctx.session.username
+        }
+        await ctx.render('admin', {
+            title: '技术文章管理后台',
+            html: minify(render(ServerData, ctx.req.url, 'admin')),
+            ServerData
+        })
+        return ctx
+    }
+
+    @Get('/post-article')
+    async postArticle(@Ctx() ctx: any) {
+        const ServerData = {
+            isLogin: !!ctx.session.username
+        }
+        await ctx.render('admin', {
+            title: '技术文章管理后台',
+            html: minify(render(ServerData, ctx.req.url, 'admin')),
+            ServerData
+        })
+        return ctx
+    }
     @Get('/login')
     async login(@Ctx() ctx: any) {
         const ServerData = {
@@ -35,7 +61,7 @@ export class UserController {
 
         // if (!!ctx.session.username) ctx.redirect('/admin')
         await ctx.render('admin', {
-            title: 'admin',
+            title: '技术文章管理后台',
             html: minify(render(ServerData, ctx.req.url, 'admin')),
             ServerData
         })
