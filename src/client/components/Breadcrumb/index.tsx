@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 import { autobind } from 'core-decorators'
 
 // @withRouter
@@ -37,9 +37,7 @@ export default class extends React.Component {
         <div className="swiper-com flex-center">{ "<" }</div>
         <div className="bread-swiper flex-g-1">
           <div className="flex">
-            <div className="swipe-item">
-              <Link to="/admin">首页</Link>
-            </div>
+            <NavLink  className="flex-center" to="/admin" activeClassName="active">首页</NavLink>
           </div>
         </div>
         <div className="nav-right flex">

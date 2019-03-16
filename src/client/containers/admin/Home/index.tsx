@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { autobind } from 'core-decorators'
 import Page from '../../../components/Page'
-import { Select,Input,Button } from 'antd'
+import { Select,Input,Button, Checkbox } from 'antd'
 // const Option = Select.Option;
 const Search = Input.Search;
 
@@ -15,9 +15,15 @@ export default class extends React.Component {
   onSearch(){
 
   }
+  onCheck(){
+
+  }
+  onCheckItem(){
+
+  }
   render() {
     return (
-      <Page className="admin-box">
+      <Page className="admin-box flex-col">
         <section className="admin-head flex wrap">
           <div className="search-group">
             <span className="search-lable">标签</span>
@@ -38,10 +44,155 @@ export default class extends React.Component {
             <Button type="primary">新增文章啊</Button>
           </div>
         </section>
-        <section className="flex-g-1">
-          <div className="">
-          
+        <section className="flex-g-1 article-cont">
+          <div className="article-lists">
+            <table>
+              <thead>
+                <tr>
+                  <th width="8%"><Checkbox onChange={this.onCheck}>ID</Checkbox></th>
+                  <th width="30%">标题</th>
+                  <th width="30%">内容</th>
+                  <th>发表日期</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><Checkbox onChange={this.onCheckItem}>1</Checkbox></td>
+                  <td>webpack优化</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>
+                    <Button type="danger" className="article-btn">删除</Button>
+                    <Button type="primary" className="article-btn">编辑</Button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </section>
+        <section className="article-pagination">
+          当前区域为分页
         </section>
       </Page>
     );
